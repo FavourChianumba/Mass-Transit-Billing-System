@@ -1,23 +1,11 @@
-# THOUGHT MACHINE
+# Mass Transit Billing System
+### Overview
+This is a billing system designed for a mass transit system that consists of a network of train stations, each belonging to a pricing zone. The system records user journeys with their user ID, direction (IN/OUT of the station), the station, and the time of entry/exit (in UTC) for a given period. The data is sorted by timestamp but not necessarily by users.
 
-# Programming Test - Mass Transit Billing
+### Billing System
+The billing system has the following cost structure for journeys:
 
-Version: 1.0
 
-## Requirements
-
-- Please complete the following programming exercise. Allow for about 4-6 hours.
-- You must use either Python or Go to complete this exercise. You may use the standard library for
-  your language freely, but not other third-party libraries. In your test code you may use common
-  third-party test packages (e.g. pytest or testify).
-- Please produce production-quality code, providing tests and comments where necessary.
-- Provide all source code, ideally in a zip file / tarball so that it can be checked out and built.
-- Please do not share or upload the code anywhere else (e.g. Github).
-- Ensure your solution takes command line arguments described below.
-- Provide a brief README file with instructions on how to build/run your program (and tests if
-  present) - and any assumptions made
-
-## Exercise
 
 The task is to build a billing system for a mass transit system. The transit system has a network of
 train stations, each belonging to a pricing zone. Each time a user enters (IN) or exits (OUT) a
