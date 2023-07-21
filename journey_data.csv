@@ -1,0 +1,16 @@
+user_id,station,direction,time
+user1,think_tank_terminus,IN,2022-04-04T9:40:00
+user2,think_tank_terminus,IN,2022-04-04T9:50:00
+user1,core_cross,OUT,2022-04-04T13:55:00
+user3,think_tank_terminus,IN,2022-04-05T11:30:00
+user3,cloud_lane,OUT,2022-04-05T12:02:11
+user3,cloud_lane,IN,2022-04-05T13:44:07
+user3,core_cross,OUT,2022-04-05T14:30:37
+user3,think_tank_terminus,IN,2022-04-05T15:14:12
+user3,payments_junction,OUT,2022-04-05T15:24:28
+user3,payments_junction,IN,2022-04-05T20:14:52
+user3,think_tank_terminus,OUT,2022-04-05T21:42:00
+user3,think_tank_terminus,IN,2022-04-05T22:10:00
+user3,payments_junction,OUT,2022-04-05T23:40:00
+user3,payments_junction,IN,2022-04-06T05:10:00
+user3,think_tank_terminus,OUT,2022-04-06T07:40:00
