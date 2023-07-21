@@ -5,15 +5,6 @@ This is a billing system designed for a mass transit system that consists of a n
 ### Billing System
 The billing system has the following cost structure for journeys:
 
-
-
-The task is to build a billing system for a mass transit system. The transit system has a network of
-train stations, each belonging to a pricing zone. Each time a user enters (IN) or exits (OUT) a
-station it is recorded. The data you are provided with is the user_id, direction (either IN or OUT
-of the station), the station and the time of the entry/exit (in UTC) for all the journeys in a given
-time period. You can assume the data is sorted by timestamp, but not necessarily by users. You are
-tasked with calculating the total charge for each customer at the end of the period.
-
 There is a £2 base fee for all journeys, and additional costs based on the entry and exit zones.
 
 | Zone | In / Out additional Cost |
@@ -23,16 +14,33 @@ There is a £2 base fee for all journeys, and additional costs based on the entr
 | 4-5  | £0.30                    |
 | 6+   | £0.10                    |
 
-e.g. zone 1 -> zone 1 = 2.00 + 0.80 + 0.80 = £3.60 zone 6 -> zone 4 = 2.00 + 0.10 + 0.30 = £2.40
+Example 1: zone 1 -> zone 1 = £2.00 + £0.80 + £0.80 = £3.60
 
-For any erroneous journeys where an IN or OUT is missing a £5 fee is used as the total journey
-price. It should be assumed that all valid journeys are completed before midnight (i.e. All valid
-journeys will have an IN and an OUT on the same day).
+Example 2: zone 6 -> zone 4 = £2.00 + £0.10 + £0.30 = £2.40
 
-There is also a daily cap of £15, and a monthly cap of £100. Caps include all journey costs and
-fees, once a given cap is reached the customer pays no extra for the given day or month.
+For any erroneous journeys where an IN or OUT is missing, a £5 fee is charged as the total journey price. It should be assumed that all valid journeys are completed before midnight (i.e., all valid journeys will have an IN and an OUT on the same day).
 
-Expected Cmd to run:
+There is a daily cap of £15 and a monthly cap of £100. Once a given cap is reached, the customer pays no extra for that day or month.
+
+Assumptions
+The program and tests are run as explained in the Usage section.
+CSV files are provided for the station zone map and journey data.
+The CSV files are encoded in UTF-8.
+The CSV files contain valid data in the correct format, and there are no missing values.
+Zone names are formatted as integers starting from 1.
+Stations are only in one zone.
+There are no restrictions on customers tapping in or out of stations outside of those stated in the specification.
+Pricing of the zones will remain fixed for the foreseeable future.
+Any future changes to a station's zone will not be backdated, so refunds or additional charges will not be required.
+There will be future extensions to the system, so the program is designed to be easily extended.
+Usage
+This program was written and tested using Python 3.11.3 on macOS Ventura 13.3.1.
+
+Running the Program
+No external libraries are required to run the program.
+
+To run the program, use the following command from the src directory:
+
 
 ```bash
 <your_program> <zones_file_path> <journey_data_path> <output_file_path>
