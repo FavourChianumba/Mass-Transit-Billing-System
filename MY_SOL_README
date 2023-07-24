@@ -1,0 +1,42 @@
+To build and run the program, follow the instructions below:
+
+File Structure:
+
+Create a directory with the following structure:
+├── main.py
+├── zone_map.csv
+├── journey_data.csv
+
+Code Files:
+
+Copy and paste the provided from my_sol code into the main.py file.
+Ensure you have the zone_map.csv and journey_data.csv files in the same directory.
+
+Running the Program:
+
+Make sure you have Python 3 installed on your machine.
+Open a terminal or command prompt and navigate to the directory containing the files.
+Run the following command to execute the program: python main.py
+
+The program will read the input files, perform the calculations, and generate an output.csv file with the results.
+
+Assumptions:
+
+The input files (zone_map.csv and journey_data.csv) are correctly formatted and present in the same directory.
+The input files contain the required columns with the expected names.
+The zone_map.csv file has a "station" column and a corresponding "zone" column.
+The journey_data.csv file has "user_id," "station," "direction," and "time" columns representing user information, station name, direction of travel ("IN" or "OUT"), and the timestamp of the journey, respectively.
+The program assumes that the input files are valid and do not contain any corrupt or missing data.
+
+Assumptions my_sol makes:
+The program uses a daily spending cap of $15 and a monthly spending cap of $100.
+The program assumes that the journey data is sorted chronologically by the timestamp.
+
+Testing:
+
+No explicit new tests are provided in the code. However, you can test the program with journey_data.csv and zone_map.csv input files to verify its functionality
+
+Output:
+
+After running the program, an output.csv file will be generated in the same directory.
+The output.csv file will contain the user IDs and their corresponding billing amounts, rounded to 2 decimal places.
